@@ -16,7 +16,7 @@ class Vehicule
     private $description;
 
     // Constructeur
-    public function __construct($marque, $modele, $prix, $image, $cat_id, $transmission, $carburant, $places, $description, $dispo = true , $id = null)
+    public function __construct($marque, $modele, $prix, $image, $cat_id, $transmission, $carburant, $places, $description, $dispo = true, $id = null)
     {
         $this->id = $id;
         $this->marque = $marque;
@@ -128,5 +128,31 @@ class Vehicule
 
         $stmt = $pdo->prepare($sql);
         return $stmt->execute([$this->marque, $this->modele, $this->prix_journalier, $this->image_url, $this->categorie_id, $this->transmission, $this->carburant, $this->nb_places, $this->description]);
+    }
+
+
+    public static function getAllVehicules()
+    {
+        $pdo = DbConnection::getConnection();
+        $sql = "SELECT * from vehicules order by id";
+
+        $result = $pdo->query($sql);
+
+        
+        while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+            $arr[] = new Vehicule(
+                $row["marque"],
+                $row["modele"],
+                $row["prix_par_jour"],
+                $row["image"],
+                $row["categorie_id"],
+                $row["transmission"],
+                $row["carburant"],
+                $row["nb_places"],
+                $row["description"]
+            );
+        }
+
+        return $arr;
     }
 }
