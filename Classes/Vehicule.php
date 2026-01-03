@@ -134,11 +134,11 @@ class Vehicule
     public static function getAllVehicules()
     {
         $pdo = DbConnection::getConnection();
-        $sql = "SELECT * from vehicules order by id";
+        $sql = "SELECT * from vehicules where is_active = 1 order by id";
 
         $result = $pdo->query($sql);
 
-        
+        $arr = [];
         while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
             $arr[] = new Vehicule(
                 $row["marque"],
@@ -160,10 +160,29 @@ class Vehicule
     }
 
 
-    public function updateVeh() {
+    public function updateVeh()
+    {
         $sql = "UPDATE vehicules set marque = ? , modele = ? ,prix_par_jour = ? , image = ? , categorie_id = ? ,transmission = ?  , carburant = ? , nb_places = ? , description = ? where id = ?  ";
         $conn = DbConnection::getConnection();
         $stmt = $conn->prepare($sql);
-        return $stmt->execute([$this->marque,$this->modele,$this->prix_journalier,$this->image_url,$this->categorie_id,$this->transmission,$this->carburant,$this->nb_places,$this->description,$this->id]);
+        return $stmt->execute([$this->marque, $this->modele, $this->prix_journalier, $this->image_url, $this->categorie_id, $this->transmission, $this->carburant, $this->nb_places, $this->description, $this->id]);
+    }
+
+
+    public static function deleteById($id)
+    {
+        $sql = "DELETE FROM vehicules WHERE id = ?";
+        $conn = DbConnection::getConnection();
+        $stmt = $conn->prepare($sql);
+        return $stmt->execute([$id]);
+    }
+
+    public static function softDeleteById($id)
+    {
+        $sql = "UPDATE vehicules SET is_active = 0 WHERE id = ?";
+        $conn = DbConnection::getConnection();
+        $stmt = $conn->prepare($sql);
+
+        return $stmt->execute([$id]);
     }
 }
