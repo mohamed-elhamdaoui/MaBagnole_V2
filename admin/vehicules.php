@@ -185,6 +185,13 @@
                             class="w-full p-4 bg-gray-50 border-none rounded-2xl focus:ring-2 focus:ring-red-500 outline-none text-sm text-gray-500">
                     </div>
                 </div>
+                <div class="grid grid-cols-1 gap-6">
+                    <div>
+                        <label class="block text-[10px] font-black text-gray-400 uppercase mb-2 tracking-widest">Description du véhicule</label>
+                        <textarea name="description" rows="3" placeholder="Ex: Intérieur cuir, Apple CarPlay, Toit ouvrant..."
+                            class="w-full p-4 bg-gray-50 border-none rounded-2xl focus:ring-2 focus:ring-red-500 outline-none font-medium text-gray-700"></textarea>
+                    </div>
+                </div>
 
                 <div class="flex justify-end gap-4 pt-6 border-t border-gray-50">
                     <button type="button" onclick="toggleModal('addVehiculeModal')" class="font-bold text-gray-400 px-4">Annuler</button>
