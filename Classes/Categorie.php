@@ -5,6 +5,7 @@ class Categorie
     private $id;
     private $nom;
     private $description;
+    
 
     public function __construct($nom, $description, $id = null)
     {
