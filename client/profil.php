@@ -60,18 +60,31 @@ if (isset($_GET['error'])) {
             </div>
             
             <nav class="flex-1 px-6 space-y-1">
-                <a href="client_dashboard.php" class="flex items-center p-4 text-gray-500 hover:bg-gray-50 rounded-2xl transition">
-                    <i class="fas fa-calendar-check mr-4"></i> Mes Locations
-                </a>
-                
-                <a href="avis.php" class="flex items-center p-4 text-gray-500 hover:bg-gray-50 rounded-2xl transition">
-                    <i class="fas fa-star mr-4"></i> Mes Avis
-                </a>
-                
-                <a href="profil.php" class="flex items-center p-4 text-gray-900 bg-gray-50 rounded-2xl font-bold border-l-4 border-red-600">
-                    <i class="fas fa-user-circle mr-4 text-red-600"></i> Mon Profil
-                </a>
-            </nav>
+    <a href="dashboard.php" class="flex items-center p-4 text-gray-500 hover:bg-gray-50 rounded-2xl transition">
+        <i class="fas fa-calendar-check mr-4"></i> Mes Locations
+    </a>
+    
+    <a href="avis.php" class="flex items-center p-4 text-gray-500 hover:bg-gray-50 rounded-2xl transition">
+        <i class="fas fa-star mr-4"></i> Mes Avis
+    </a>
+
+    <div class="my-4 border-t border-gray-100 mx-4"></div>
+    <span class="px-4 text-[10px] uppercase font-bold text-gray-400 tracking-widest">Blog & Communauté</span>
+
+    <a href="mes_articles.php" class="flex items-center p-4 text-gray-500 hover:bg-gray-50 rounded-2xl transition">
+        <i class="fas fa-pen-nib mr-4"></i> Mes Articles
+    </a>
+
+    <a href="articles_favoris.php" class="flex items-center p-4 text-gray-500 hover:bg-gray-50 rounded-2xl transition group">
+        <i class="fas fa-bookmark mr-4 group-hover:text-red-600 transition"></i> Articles Favoris
+    </a>
+
+    <div class="my-4 border-t border-gray-100 mx-4"></div>
+
+    <a href="profil.php" class="flex items-center p-4 text-gray-900 bg-gray-50 rounded-2xl font-bold border-l-4 border-red-600">
+        <i class="fas fa-user-circle mr-4 text-red-600"></i> Mon Profil
+    </a>
+</nav>
 
             <div class="p-6 border-t border-gray-100">
                 <a href="../auth/logout.php" class="flex items-center p-4 text-red-400 hover:text-red-600 transition font-semibold">
