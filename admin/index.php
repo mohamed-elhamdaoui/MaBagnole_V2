@@ -21,28 +21,37 @@
             </div>
             
             <nav class="flex-1 p-6 space-y-2">
-                <a href="index.php" class="flex items-center p-4 text-red-600 bg-red-50 rounded-2xl font-black border-l-4 border-red-600 transition">
-                    <i class="fas fa-chart-line mr-4"></i> Dashboard
-                </a>
-                <a href="vehicules.php" class="flex items-center p-4 text-gray-500 hover:bg-gray-50 rounded-2xl transition font-bold">
-                    <i class="fas fa-car mr-4"></i> Véhicules
-                </a>
-                <a href="categories.php" class="flex items-center p-4 text-gray-500 hover:bg-gray-50 rounded-2xl transition font-bold">
-                    <i class="fas fa-tags mr-4"></i> Catégories
-                </a>
-                <a href="reservations.php" class="flex items-center p-4 text-gray-500 hover:bg-gray-50 rounded-2xl transition font-bold">
-                    <i class="fas fa-calendar-check mr-4"></i> Réservations
-                </a>
-                <a href="avis.php" class="flex items-center p-4 text-gray-500 hover:bg-gray-50 rounded-2xl transition font-bold">
-                    <i class="fas fa-star mr-4"></i> Avis Clients
-                </a>
-                
-                <div class="pt-10">
-                    <a href="../index.php" class="flex items-center p-4 text-gray-400 hover:text-red-600 transition text-sm">
-                        <i class="fas fa-eye mr-4"></i> Voir le site public
-                    </a>
-                </div>
-            </nav>
+    <a href="index.php" class="flex items-center p-4 text-red-600 bg-red-50 rounded-2xl font-black border-l-4 border-red-600 transition">
+        <i class="fas fa-chart-line mr-4"></i> Dashboard
+    </a>
+    
+    <a href="vehicules.php" class="flex items-center p-4 text-gray-500 hover:bg-gray-50 rounded-2xl transition font-bold">
+        <i class="fas fa-car mr-4"></i> Véhicules
+    </a>
+    <a href="categories.php" class="flex items-center p-4 text-gray-500 hover:bg-gray-50 rounded-2xl transition font-bold">
+        <i class="fas fa-tags mr-4"></i> Catégories
+    </a>
+    <a href="reservations.php" class="flex items-center p-4 text-gray-500 hover:bg-gray-50 rounded-2xl transition font-bold">
+        <i class="fas fa-calendar-check mr-4"></i> Réservations
+    </a>
+    
+    <a href="articles.php" class="flex items-center p-4 text-gray-500 hover:bg-gray-50 rounded-2xl transition font-bold justify-between">
+        <div class="flex items-center">
+            <i class="fas fa-newspaper mr-4"></i> Blog / Articles
+        </div>
+        <span class="bg-red-600 text-white text-[10px] font-black px-2 py-1 rounded-full">3</span>
+    </a>
+
+    <a href="avis.php" class="flex items-center p-4 text-gray-500 hover:bg-gray-50 rounded-2xl transition font-bold">
+        <i class="fas fa-star mr-4"></i> Avis Clients
+    </a>
+    
+    <div class="pt-10">
+        <a href="../index.php" class="flex items-center p-4 text-gray-400 hover:text-red-600 transition text-sm">
+            <i class="fas fa-eye mr-4"></i> Voir le site public
+        </a>
+    </div>
+</nav>
 
             <div class="p-6 border-t border-gray-100">
                 <a href="../auth/logout.php" class="flex items-center p-4 text-gray-400 hover:text-red-600 transition font-semibold">
@@ -51,7 +60,7 @@
             </div>
         </aside>
 
-        <main class="flex-1 p-6 md:p-12">
+        <main class="flex-1 p-6 md:p-12 overflow-y-auto">
             
             <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-12 gap-4">
                 <div>
@@ -127,26 +136,72 @@
                                 <p class="font-black text-gray-900">280€</p>
                             </div>
                         </div>
-                        </div>
+                    </div>
                 </div>
 
-                <div>
-                    <h3 class="text-xl font-black mb-8 flex items-center uppercase tracking-tight">
-                        <span class="w-8 h-1 bg-gray-900 mr-3 rounded-full"></span>
-                        Avis
-                    </h3>
-                    <div class="space-y-4">
-                        <div class="bg-white p-6 rounded-3xl shadow-sm border border-gray-100">
-                            <div class="flex justify-between items-center mb-3">
-                                <div class="flex text-yellow-400 text-[8px]">
-                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <div class="space-y-8">
+                    
+                    <div>
+                        <div class="flex justify-between items-center mb-6">
+                            <h3 class="text-xl font-black flex items-center uppercase tracking-tight">
+                                <span class="w-8 h-1 bg-gray-900 mr-3 rounded-full"></span>
+                                Articles à valider
+                            </h3>
+                            <a href="articles.php" class="text-[10px] font-bold text-red-600 hover:underline">Voir tout</a>
+                        </div>
+                        
+                        <div class="space-y-4">
+                            <div class="bg-white p-5 rounded-3xl shadow-sm border-l-4 border-yellow-400 relative">
+                                <span class="absolute top-4 right-4 text-[9px] bg-yellow-50 text-yellow-600 font-bold px-2 py-1 rounded-full uppercase">Brouillon</span>
+                                <h4 class="font-bold text-gray-900 text-sm mb-1 pr-12">Entretien hivernal : Les 5 règles d'or</h4>
+                                <p class="text-[10px] text-gray-400 mb-3">Soumis par <span class="font-bold text-gray-600">Karim B.</span> • Il y a 2h</p>
+                                
+                                <div class="flex gap-2 mt-2">
+                                    <button class="flex-1 bg-gray-900 text-white text-[10px] py-2 rounded-xl font-bold hover:bg-green-600 transition">
+                                        <i class="fas fa-check mr-1"></i> Publier
+                                    </button>
+                                    <button class="px-3 bg-gray-100 text-gray-500 text-[10px] py-2 rounded-xl font-bold hover:bg-red-100 hover:text-red-600 transition">
+                                        <i class="fas fa-times"></i>
+                                    </button>
                                 </div>
-                                <span class="text-[9px] text-gray-300 font-bold uppercase italic">Aujourd'hui</span>
                             </div>
-                            <p class="text-xs text-gray-500 italic leading-relaxed mb-4">"Service irréprochable, véhicule très propre. Merci !"</p>
-                            <p class="text-[10px] text-gray-400">— Par <span class="font-black text-gray-800 uppercase">Ahmed A.</span></p>
+                            
+                            <div class="bg-white p-5 rounded-3xl shadow-sm border-l-4 border-yellow-400 relative">
+                                <span class="absolute top-4 right-4 text-[9px] bg-yellow-50 text-yellow-600 font-bold px-2 py-1 rounded-full uppercase">Brouillon</span>
+                                <h4 class="font-bold text-gray-900 text-sm mb-1 pr-12">Mon roadtrip en Dacia Duster</h4>
+                                <p class="text-[10px] text-gray-400 mb-3">Soumis par <span class="font-bold text-gray-600">Amine S.</span> • Il y a 5h</p>
+                                
+                                <div class="flex gap-2 mt-2">
+                                    <button class="flex-1 bg-gray-900 text-white text-[10px] py-2 rounded-xl font-bold hover:bg-green-600 transition">
+                                        <i class="fas fa-check mr-1"></i> Publier
+                                    </button>
+                                    <button class="px-3 bg-gray-100 text-gray-500 text-[10px] py-2 rounded-xl font-bold hover:bg-red-100 hover:text-red-600 transition">
+                                        <i class="fas fa-times"></i>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
+
+                    <div>
+                        <h3 class="text-xl font-black mb-6 flex items-center uppercase tracking-tight">
+                            <span class="w-8 h-1 bg-gray-200 mr-3 rounded-full"></span>
+                            Derniers Avis
+                        </h3>
+                        <div class="space-y-4">
+                            <div class="bg-white p-6 rounded-3xl shadow-sm border border-gray-100">
+                                <div class="flex justify-between items-center mb-3">
+                                    <div class="flex text-yellow-400 text-[8px]">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="text-[9px] text-gray-300 font-bold uppercase italic">Aujourd'hui</span>
+                                </div>
+                                <p class="text-xs text-gray-500 italic leading-relaxed mb-4">"Service irréprochable, véhicule très propre. Merci !"</p>
+                                <p class="text-[10px] text-gray-400">— Par <span class="font-black text-gray-800 uppercase">Ahmed A.</span></p>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
 
             </div>

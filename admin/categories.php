@@ -36,22 +36,38 @@ foreach ($categories as $c ) {
             </div>
             
             <nav class="flex-1 p-6 space-y-2">
-                <a href="index.php" class="flex items-center p-4 text-gray-500 hover:bg-gray-50 rounded-2xl transition font-bold">
-                    <i class="fas fa-chart-line mr-4"></i> Dashboard
-                </a>
-                <a href="vehicules.php" class="flex items-center p-4 text-gray-500 hover:bg-gray-50 rounded-2xl transition font-bold">
-                    <i class="fas fa-car mr-4"></i> Véhicules
-                </a>
-                <a href="categories.php" class="flex items-center p-4 text-red-600 bg-red-50 rounded-2xl font-black border-l-4 border-red-600 transition">
-                    <i class="fas fa-tags mr-4"></i> Catégories
-                </a>
-                <a href="reservations.php" class="flex items-center p-4 text-gray-500 hover:bg-gray-50 rounded-2xl transition font-bold">
-                    <i class="fas fa-calendar-check mr-4"></i> Réservations
-                </a>
-                <a href="avis.php" class="flex items-center p-4 text-gray-500 hover:bg-gray-50 rounded-2xl transition font-bold">
-                    <i class="fas fa-star mr-4"></i> Avis Clients
-                </a>
-            </nav>
+    <a href="index.php" class="flex items-center p-4 text-gray-500 hover:bg-gray-50 rounded-2xl transition font-bold">
+        <i class="fas fa-chart-line mr-4"></i> Dashboard
+    </a>
+    <a href="vehicules.php" class="flex items-center p-4 text-gray-500 hover:bg-gray-50 rounded-2xl transition font-bold">
+        <i class="fas fa-car mr-4"></i> Véhicules
+    </a>
+    
+    <a href="categories.php" class="flex items-center p-4 text-red-600 bg-red-50 rounded-2xl font-black border-l-4 border-red-600 transition">
+        <i class="fas fa-tags mr-4"></i> Catégories
+    </a>
+
+    <a href="reservations.php" class="flex items-center p-4 text-gray-500 hover:bg-gray-50 rounded-2xl transition font-bold">
+        <i class="fas fa-calendar-check mr-4"></i> Réservations
+    </a>
+    
+    <a href="articles.php" class="flex items-center p-4 text-gray-500 hover:bg-gray-50 rounded-2xl transition font-bold justify-between">
+        <div class="flex items-center">
+            <i class="fas fa-newspaper mr-4"></i> Blog / Articles
+        </div>
+        <span class="bg-red-600 text-white text-[10px] font-black px-2 py-1 rounded-full">3</span>
+    </a>
+
+    <a href="avis.php" class="flex items-center p-4 text-gray-500 hover:bg-gray-50 rounded-2xl transition font-bold">
+        <i class="fas fa-star mr-4"></i> Avis Clients
+    </a>
+    
+    <div class="pt-10">
+        <a href="../index.php" class="flex items-center p-4 text-gray-400 hover:text-red-600 transition text-sm">
+            <i class="fas fa-eye mr-4"></i> Voir le site public
+        </a>
+    </div>
+</nav>
 
             <div class="p-6 border-t border-gray-100">
                 <a href="../auth/logout.php" class="flex items-center p-4 text-gray-400 hover:text-red-600 transition font-semibold">
